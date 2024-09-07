@@ -1,3 +1,0 @@
-data/* filter=lfs diff=lfs merge=lfs -text
-data/raw/yeast_genotype_train.txt filter=lfs diff=lfs merge=lfs -text
-data/raw/yeast_genotype_test.txt filter=lfs diff=lfs merge=lfs -text
