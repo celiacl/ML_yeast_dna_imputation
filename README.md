@@ -53,18 +53,43 @@ Contiene todos los notebooks utilizados, organizados por tarea y/o arquitectura:
 - **`notebooks/RF_unique_model.ipynb`**: Notebook donde se entrena y prueba un modelo de **Random Forest** tradicional, entrenando un solo modelo para todo el conjunto de datos.
 - **`notebooks/RF_yeast.ipynb`**: Notebook donde se entrena un **Random Forest** para predecir valores faltantes en columnas individuales del conjunto de test, utilizando un modelo independiente por cada columna.
 - **`notebooks/XGBoost.ipynb`**: Notebook donde se realiza el entrenamiento y prueba con el modelo de **XGBoost**.
-- **`notebooks/attention_autoencoder_yeast.ipynb`**: Implementación de un **autoencoder con atención** para imputar valores faltantes en el conjunto de datos reducido.
-- **`notebooks/attention_autoencoder_yeast_amplified.ipynb`**: Variante del autoencoder con atención, utilizando una arquitectura más compleja o parámetros ajustados para mejorar la imputación.
+- **`notebooks/SCADA.ipynb`**:Implementación avanzada de SDCA con capa de **atención** para imputar valores faltantes en el conjunto de datos completo.
+- **`notebooks/SCADA_reduced.ipynb`**: Implementación avanzada de SDCA con capa de **atención** para imputar valores faltantes en el conjunto de datos reducido.
 
+---
+## Clonar el proyecto e inicializar el entorno
+### 1. Clonar el repositorio
+```bash
+git clone https://github.com/celiacl/ML_yeast_dna_imputation.git
+cd ML_yeast_dna_imputation
+```
+
+### 2. Crear un entorno virtual (opcional)
+```bash
+python -m venv venv
+source venv/bin/activate   # En Linux/macOS
+venv\Scripts\activate      # En Windows
+```
+
+### 3. Instalar las dependencias
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Ejecutar los notebooks
+Inicia un servidor Jupyter para explorar los notebooks:
+```bash
+jupyter notebook
+```
 ---
 
 ## Ejecución del Proyecto
 
-### Preprocesamiento
+### 1. Preprocesamiento
 1. Ejecutar el notebook `preprocessing.ipynb` para generar los conjuntos de **train** y **test reducidos**, así como los conjuntos de test con diferentes niveles de pérdida de datos.
 2. Los datos preprocesados se guardarán en la carpeta `data/processed/` en formato `.parquet`.
 
-### Entrenamiento y Evaluación de Modelos
+### 2. Entrenamiento y Evaluación de Modelos
 1. Ejecutar los notebooks correspondientes a cada método de imputación:
    - **KNN**: `notebooks/KNN_yeast.ipynb`
    - **Random Forest (con un solo modelo)**: `notebooks/RF_unique_model.ipynb`
@@ -75,7 +100,7 @@ Contiene todos los notebooks utilizados, organizados por tarea y/o arquitectura:
 2. Los modelos entrenados se almacenarán en la carpeta `models/` en formato `.h5`.
 2. Los datasets imputados se almacenarán en la carpeta `data/generates` en el subdirectorio correspondiente a cada arquitectura, en formato .parquet.
 
-### Evaluación Comparativa
+### 3. Evaluación Comparativa
 - Los resultados de la imputación se evaluarán en términos de métricas como **accuracy**, **F1-score**, **precision**, y **recall**, y se compararán entre los diferentes enfoques (comparativa realizada en el documento de desarrollo del TFM).
 
 ---
