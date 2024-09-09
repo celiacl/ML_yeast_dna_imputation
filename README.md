@@ -5,7 +5,7 @@ Este proyecto explora varios enfoques para la **imputación de valores faltantes
 
 El proyecto está inspirado en el trabajo disponible en [SCDA](https://github.com/work-hard-play-harder/SCDA), un repositorio que presenta un método de imputación basado en **Sparse Convolutional Denoising Autoencoders** para la imputación genotípica. Dado que este repositorio ofrece un código transparente y completamente reproducible, se decidió utilizar como base este proyecto para implementar y comparar distintos métodos de imputación mediante **Machine Learning** (ML).
 
-**Adicionalmente a la comparativa, se presenta un modelo más avanzado Sparse Convolutional Attention Denoising Autoencoder (SCADA) donde le se le añade a SCDA una capa de atención.**
+**Adicionalmente a la comparativa, se presenta un modelo más avanzado Sparse Convolutional Attention Denoising Autoencoder (SCADA), que consiste en la incorporación de una capa de atención a SCDA.**
 
 ### Enfoques Implementados
 
